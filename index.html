@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly demo website showing many useful HTML elements.">
+  <title>HTML Tag Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Small internal CSS example; most styles live in style.css */
+    .inline-demo { border-left: 4px solid var(--accent); padding-left: 12px; }
+  </style>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+      <div>
+        <p class="eyebrow">LEARN • BUILD • EXPLORE</p>
+        <h1>HTML Tag Explorer</h1>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#basics">Basics</a>
+      <a href="#text">Text</a>
+      <a href="#media">Media</a>
+      <a href="#forms">Forms</a>
+      <a href="#tables">Tables</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="basics">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR HTML PLAYGROUND</p>
+        <h2>One page. <span>Many tags.</span></h2>
+        <p>Explore the building blocks of the web with practical examples. Read the code, try the controls, and use this page as a learning reference.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#tag-library">Explore HTML tags</a>
+          <a class="button secondary" href="#practice">Try a mini exercise</a>
+        </div>
+        <p class="note">HTML gives content structure. CSS styles it. JavaScript adds behaviour.</p>
+      </div>
+      <aside class="code-card" aria-label="Example HTML code">
+        <div class="window-dots"><span></span><span></span><span></span><b>index.html</b></div>
+        <pre><code>&lt;main&gt;
+  &lt;h1&gt;Hello, web!&lt;/h1&gt;
+  &lt;p&gt;I am learning HTML.&lt;/p&gt;
+  &lt;a href="#practice"&gt;Try it&lt;/a&gt;
+&lt;/main&gt;</code></pre>
+        <div class="code-card-footer"><span class="status-dot"></span> Your first steps start here</div>
+      </aside>
+    </section>
+
+    <section class="stats" aria-label="HTML overview">
+      <article class="stat-card"><strong>Structure</strong><span>HTML elements</span></article>
+      <article class="stat-card"><strong>Design</strong><span>CSS styles</span></article>
+      <article class="stat-card"><strong>Interaction</strong><span>JavaScript actions</span></article>
+    </section>
+
+    <section class="section" id="text">
+      <div class="section-heading">
+        <p class="eyebrow">TEXT & SEMANTICS</p>
+        <h2>Make content meaningful</h2>
+        <p>Use elements according to what the content means—not just how you want it to look.</p>
+      </div>
+      <div class="demo-grid">
+        <article class="demo-card">
+          <span class="tag-label">HEADINGS & PARAGRAPHS</span>
+          <h3>From big ideas to details</h3>
+          <h4>Section heading</h4>
+          <p>This is a paragraph using <code>&lt;p&gt;</code>. Here is <strong>important text</strong>, <em>emphasized text</em>, and <mark>highlighted text</mark>.</p>
+          <p>Science example: H<sub>2</sub>O and maths example: x<sup>2</sup>.</p>
+          <hr>
+          <small>A small note can use the <code>&lt;small&gt;</code> element.</small>
+        </article>
+        <article class="demo-card">
+          <span class="tag-label">LISTS</span>
+          <h3>Organize information</h3>
+          <p>Things needed to build a web page:</p>
+          <ul><li>A text editor</li><li>A browser</li><li>Curiosity</li></ul>
+          <p>Basic workflow:</p>
+          <ol><li>Write HTML</li><li>Save as <code>index.html</code></li><li>Open in a browser</li></ol>
+        </article>
+        <article class="demo-card">
+          <span class="tag-label">QUOTATIONS & CODE</span>
+          <h3>Show a source or example</h3>
+          <blockquote cite="https://html.spec.whatwg.org/">
+            Good structure helps people and browsers understand your content.
+          </blockquote>
+          <p class="inline-demo">A short code sample: <code>&lt;h1&gt;Hello&lt;/h1&gt;</code></p>
+          <p><abbr title="HyperText Markup Language">HTML</abbr> is a markup language.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alternate" id="media">
+      <div class="section-heading">
+        <p class="eyebrow">IMAGES & MULTIMEDIA</p>
+        <h2>Bring your page to life</h2>
+        <p>Images and media need sensible file paths and accessible descriptions.</p>
+      </div>
+      <div class="media-grid">
+        <figure class="demo-card image-demo">
+          <div class="illustration" role="img" aria-label="Illustration of a sunrise over green hills">
+            <div class="sun"></div><div class="hill hill-back"></div><div class="hill hill-front"></div>
+          </div>
+          <figcaption><strong>Figure and caption</strong><br><code>&lt;figure&gt;</code> can group media with a <code>&lt;figcaption&gt;</code>.</figcaption>
+        </figure>
+        <article class="demo-card">
+          <span class="tag-label">AUDIO & VIDEO</span>
+          <h3>Media elements</h3>
+          <p>Use <code>&lt;audio controls&gt;</code> or <code>&lt;video controls&gt;</code> with a valid media file.</p>
+          <p class="muted">This demo does not include media files. Add your own MP3 or MP4 file path inside a <code>&lt;source&gt;</code> element.</p>
+          <pre><code>&lt;video controls width="320"&gt;
+  &lt;source src="demo.mp4"
+          type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="tables">
+      <div class="section-heading">
+        <p class="eyebrow">STRUCTURED DATA</p>
+        <h2>Tables make comparisons clear</h2>
+        <p>Use tables for data that naturally belongs in rows and columns.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption>Example: HTML, CSS, and JavaScript</caption>
+          <thead><tr><th scope="col">Technology</th><th scope="col">Main purpose</th><th scope="col">Example</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">HTML</th><td>Structure</td><td>Headings and paragraphs</td></tr>
+            <tr><th scope="row">CSS</th><td>Presentation</td><td>Colours and spacing</td></tr>
+            <tr><th scope="row">JavaScript</th><td>Behaviour</td><td>Responding to a click</td></tr>
+          </tbody>
+          <tfoot><tr><td colspan="3">These technologies work together to create websites.</td></tr></tfoot>
+        </table>
+      </div>
+    </section>
+
+    <section class="section alternate" id="forms">
+      <div class="section-heading">
+        <p class="eyebrow">FORMS & INTERACTION</p>
+        <h2>Try the controls</h2>
+        <p>This sample form demonstrates labels, inputs, a select menu, a text area, and a button. It does not send data to a server.</p>
+      </div>
+      <div class="form-layout">
+        <form class="demo-card form-card" id="learning-form">
+          <label for="learner-name">Your name</label>
+          <input id="learner-name" name="name" type="text" placeholder="Enter your name" required>
+          <label for="learner-level">Your level</label>
+          <select id="learner-level" name="level">
+            <option value="beginner">Beginner</option>
+            <option value="practising">Practising HTML</option>
+            <option value="building">Building a website</option>
+          </select>
+          <label for="learner-goal">What would you like to build?</label>
+          <textarea id="learner-goal" name="goal" rows="3" placeholder="A portfolio, school website, shop..."></textarea>
+          <button class="button primary" type="submit">Show my learning plan</button>
+          <output id="form-output" aria-live="polite"></output>
+        </form>
+        <aside class="tip-card">
+          <h3>Form tags you used</h3>
+          <ul>
+            <li><code>&lt;form&gt;</code> groups controls</li>
+            <li><code>&lt;label&gt;</code> names a control</li>
+            <li><code>&lt;input&gt;</code> accepts short input</li>
+            <li><code>&lt;select&gt;</code> provides options</li>
+            <li><code>&lt;textarea&gt;</code> accepts longer text</li>
+            <li><code>&lt;output&gt;</code> displays a result</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="tag-library">
+      <div class="section-heading">
+        <p class="eyebrow">QUICK REFERENCE</p>
+        <h2>HTML tag library</h2>
+        <p>Search a selection of commonly used elements and see what each one does.</p>
+      </div>
+      <label class="search-label" for="tag-search">Search tags or descriptions</label>
+      <input class="search-input" id="tag-search" type="search" placeholder="Try “image”, “form”, or “navigation”">
+      <div class="tag-grid" id="tag-grid">
+        <article class="tag-item"><code>&lt;html&gt;</code><p>Root element for the page.</p></article>
+        <article class="tag-item"><code>&lt;head&gt;</code><p>Metadata and resource references.</p></article>
+        <article class="tag-item"><code>&lt;title&gt;</code><p>Title shown in the browser tab.</p></article>
+        <article class="tag-item"><code>&lt;body&gt;</code><p>Contains page content.</p></article>
+        <article class="tag-item"><code>&lt;header&gt;</code><p>Introductory content.</p></article>
+        <article class="tag-item"><code>&lt;nav&gt;</code><p>Navigation links.</p></article>
+        <article class="tag-item"><code>&lt;main&gt;</code><p>Main content of the page.</p></article>
+        <article class="tag-item"><code>&lt;section&gt;</code><p>A thematic section.</p></article>
+        <article class="tag-item"><code>&lt;article&gt;</code><p>Self-contained content.</p></article>
+        <article class="tag-item"><code>&lt;footer&gt;</code><p>Footer information.</p></article>
+        <article class="tag-item"><code>&lt;h1&gt;–&lt;h6&gt;</code><p>Six levels of headings.</p></article>
+        <article class="tag-item"><code>&lt;p&gt;</code><p>A paragraph.</p></article>
+        <article class="tag-item"><code>&lt;a&gt;</code><p>Creates a hyperlink.</p></article>
+        <article class="tag-item"><code>&lt;strong&gt;</code><p>Marks strong importance.</p></article>
+        <article class="tag-item"><code>&lt;em&gt;</code><p>Marks emphasis.</p></article>
+        <article class="tag-item"><code>&lt;img&gt;</code><p>Embeds an image.</p></article>
+        <article class="tag-item"><code>&lt;audio&gt;</code><p>Embeds audio playback.</p></article>
+        <article class="tag-item"><code>&lt;video&gt;</code><p>Embeds video playback.</p></article>
+        <article class="tag-item"><code>&lt;ul&gt; / &lt;ol&gt;</code><p>Unordered and ordered lists.</p></article>
+        <article class="tag-item"><code>&lt;li&gt;</code><p>An item in a list.</p></article>
+        <article class="tag-item"><code>&lt;table&gt;</code><p>Displays tabular data.</p></article>
+        <article class="tag-item"><code>&lt;tr&gt; / &lt;td&gt; / &lt;th&gt;</code><p>Table row, data cell, and header cell.</p></article>
+        <article class="tag-item"><code>&lt;form&gt;</code><p>Groups form controls.</p></article>
+        <article class="tag-item"><code>&lt;input&gt;</code><p>Single-line input control.</p></article>
+        <article class="tag-item"><code>&lt;label&gt;</code><p>Labels a form control.</p></article>
+        <article class="tag-item"><code>&lt;button&gt;</code><p>Clickable button.</p></article>
+        <article class="tag-item"><code>&lt;script&gt;</code><p>Loads or contains JavaScript.</p></article>
+        <article class="tag-item"><code>&lt;style&gt;</code><p>Contains CSS rules.</p></article>
+        <article class="tag-item"><code>&lt;details&gt; / &lt;summary&gt;</code><p>Expandable disclosure section.</p></article>
+        <article class="tag-item"><code>&lt;canvas&gt; / &lt;svg&gt;</code><p>Graphics and drawings.</p></article>
+      </div>
+      <p id="no-results" class="muted" hidden>No matching tags. Try another word.</p>
+    </section>
+
+    <section class="section practice-section" id="practice">
+      <div class="practice-card">
+        <div>
+          <p class="eyebrow">QUICK PRACTICE</p>
+          <h2>Which tag makes a hyperlink?</h2>
+          <p>Choose your answer. The page will tell you whether you are correct.</p>
+        </div>
+        <div class="quiz-options" role="group" aria-label="Choose the tag for a hyperlink">
+          <button type="button" class="quiz-option" data-answer="wrong">&lt;img&gt;</button>
+          <button type="button" class="quiz-option" data-answer="correct">&lt;a&gt;</button>
+          <button type="button" class="quiz-option" data-answer="wrong">&lt;p&gt;</button>
+        </div>
+        <p id="quiz-feedback" class="quiz-feedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <details class="faq">
+        <summary>Does HTML alone make a complete website?</summary>
+        <p>HTML provides the structure. CSS improves the design, JavaScript can add interaction, and server-side code or a service may be needed for accounts, payments, and saving form submissions.</p>
+      </details>
+      <details class="faq">
+        <summary>What should I learn next?</summary>
+        <p>Practise HTML first, then learn CSS for responsive layouts and JavaScript for interactive features. Build small projects as you learn.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>HTML Tag Explorer</strong><p>A learning project built with HTML, CSS, and JavaScript.</p></div>
+    <a href="#top">Back to top ↑</a>
+    <p class="copyright">© <span id="year"></span> • Keep learning, one tag at a time.</p>
+  </footer>
+</body>
+</html>
